@@ -1,16 +1,10 @@
-# digit-camunda-wrapper
-#
-# This is a REST and convinience API that wraps Camunda gRPC API
-# 
+# dump-environment
+
 
 import os
-import multiprocessing
-import uuid
 import logging
-import asyncio
 
 import sanic
-import json
 
 
 """ 
@@ -24,7 +18,7 @@ SECRET = os.getenv('SECRET','')
 LOGFORMAT = "%(asctime)s %(funcName)-10s [%(levelname)s] %(message)s"       # Log format
 
 
-app = sanic.Sanic("DUMP_ENVIRONMENT")       # A Sanic instance
+app = sanic.Sanic("dump-environment")       # A Sanic instance
 
 
 @app.route("/", methods=['GET'])
